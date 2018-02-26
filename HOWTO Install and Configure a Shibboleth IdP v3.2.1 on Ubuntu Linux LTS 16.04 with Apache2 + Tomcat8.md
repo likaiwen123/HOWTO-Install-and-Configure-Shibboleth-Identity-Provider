@@ -56,7 +56,7 @@
   * ```vim /etc/hosts```
   
     ```bash
-    127.0.1.1 idp.example.org idp
+    127.0.1.1 idp.example.it idp
     ```
 
 1. Be sure that your firewall **doesn't block** the traffic on port **443** (or you can't access to your IdP)
@@ -66,11 +66,11 @@
 
     ```bash
     JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
-    IDP_SRC=/usr/local/src/shibboleth-identity-provider-3.2.1
+    IDP_SRC=/usr/local/src/shibboleth-identity-provider-3.3.2
     ```
   * ```source /etc/environment```
   * ```export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre```
-  * ```export IDP_SRC=/usr/local/src/shibboleth-identity-provider-3.2.1```
+  * ```export IDP_SRC=/usr/local/src/shibboleth-identity-provider-3.3.2```
   
 3. Move the Certificate and the Key file for HTTPS server from ```/tmp/``` to ```/root/certificates```:
   * ```mkdir /root/certificates```
@@ -97,23 +97,23 @@
     The Memory value depends on the phisical memory installed on the machine. 
     Set the "**Xmx**" (max heap space available to the JVM) at least to **2GB**)
 
-### Install Shibboleth Identity Provider v3.2.1
+### Install Shibboleth Identity Provider v3.3.2
 
 0. Become ROOT of the machine: 
   * ```sudo su -```
 
-1. Download the Shibboleth IdP 3.2.1:
+1. Download the Shibboleth IdP 3.3.2:
   * ```cd /usr/local/src```
-  * ```wget http://shibboleth.net/downloads/identity-provider/latest/shibboleth-identity-provider-3.2.1.tar.gz```
-  * ```tar -xzvf shibboleth-identity-provider-3.2.1.tar.gz```
-  * ```cd shibboleth-identity-provider-3.2.1```
+  * ```wget http://shibboleth.net/downloads/identity-provider/latest/shibboleth-identity-provider-3.3.2.tar.gz```
+  * ```tar -xzvf shibboleth-identity-provider-3.3.2.tar.gz```
+  * ```cd shibboleth-identity-provider-3.3.2```
 
 2. Run the installer ```install.sh```:
   * ```./bin/install.sh```
   
   ```bash
-  root@idp:/usr/local/src/shibboleth-identity-provider-3.2.1# ./bin/install.sh
-  Source (Distribution) Directory: [/usr/local/src/shibboleth-identity-provider-3.2.1]
+  root@idp:/usr/local/src/shibboleth-identity-provider-3.3.2# ./bin/install.sh
+  Source (Distribution) Directory: [/usr/local/src/shibboleth-identity-provider-3.3.2]
   Installation Directory: [/opt/shibboleth-idp]
   Hostname: [localhost.localdomain]
   idp.example.it
