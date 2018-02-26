@@ -8,7 +8,7 @@
 4. [Installation Instructions](#installation-instructions)
   1. [Install software requirements](#install-software-requirements)
   2. [Configure the environment](#configure-the-environment)
-  3. [Install Shibboleth Identity Provider 3.2.1](#install-shibboleth-identity-provider-v321)
+  3. [Install Shibboleth Identity Provider 3.3.2](#install-shibboleth-identity-provider-v332)
 5. [Configuration Instructions](#configuration-instructions)
   1. [Configure SSL on Apache2 (Tomcat8 front-end)](#configure-ssl-on-apache2-tomcat8-front-end)
   2. [Configure Apache Tomcat 8](#configure-apache-tomcat-8)
