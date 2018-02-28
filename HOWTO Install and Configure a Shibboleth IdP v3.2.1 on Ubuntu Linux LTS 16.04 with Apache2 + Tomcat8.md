@@ -13,7 +13,7 @@
   1. [Configure SSL on Apache2 (Tomcat8 front-end)](#configure-ssl-on-apache2-tomcat8-front-end)
   2. [Configure Apache Tomcat 8](#configure-apache-tomcat-8)
   3. [Speed up Tomcat 8 startup](#speed-up-tomcat-8-startup)
-  4. [Configure Shibboleth Identity Provider v3.2.1 to release the persistent-id (Stored Mode)](#configure-shibboleth-identity-provider-v321-to-release-the-persistent-id-stored-mode)
+  4. [Configure Shibboleth Identity Provider v3.3.2 to release the persistent-id (Stored Mode)](#configure-shibboleth-identity-provider-v332-to-release-the-persistent-id-stored-mode)
   5. [Configure Attribute Filter for Research and Scholarship Entity Category](#configure-attribute-filter-for-research-and-scholarship-entity-category)
 
 
@@ -280,7 +280,7 @@
 3. Restart Tomcat 8:
   * ```service tomcat8 restart```
   
-### Configure Shibboleth Identity Provider v3.2.1 to release the persistent-id (Stored mode)
+### Configure Shibboleth Identity Provider v3.3.2 to release the persistent-id (Stored mode)
 
 0. Become ROOT of the machine: 
   * ```sudo su -```
@@ -297,15 +297,15 @@
 
 3. Install the libraries **Common DBCP2**[[2]](http://commons.apache.org/proper/commons-dbcp/) used for generation of saml-id:
   * ```cd /usr/local/src/```
-  * ```wget http://mirrors.muzzy.it/apache//commons/dbcp/binaries/commonsdbcp2-2.1.1-bin.tar.gz```
-  * ```tar xzvf commons-dbcp2-2.1.1-bin.tar.gz ; cd commons-dbcp2-2.1.1/```
-  * ```cp commons-dbcp2-2.1.1.jar /opt/shibboleth-idp/edit-webapp/WEBINF/lib/```
+  * ```wget https://www.apache.org/dist/commons/dbcp/binaries/commons-dbcp2-2.2.0-bin.tar.gz```
+  * ```tar xzvf commons-dbcp2-2.2.0-bin.tar.gz ; cd commons-dbcp2-2.2.0/```
+  * ```cp commons-dbcp2-2.2.0.jar /opt/shibboleth-idp/edit-webapp/WEBINF/lib/```
   
 4. Install the libraries **Tomcat Common Pool**[[3]](http://commons.apache.org/proper/commons-pool/download_pool.cgi) used for the generation of saml-id:
   * ```cd /usr/local/src/```
-  * ```wget http://mirror.nohup.it/apache//commons/pool/binaries/commonspool2-2.4.2-bin.tar.gz```
-  * ```tar xzvf commons-pool2-2.4.2-bin.tar.gz ; cd commons-pool2-2.4.2/```
-  * ```cp commons-pool2-2.4.2.jar /opt/shibboleth-idp/edit-webapp/WEBINF/lib/```
+  * ```wget https://www.apache.org/dist/commons/pool/binaries/commons-pool2-2.5.0-bin.tar.gz```
+  * ```tar xzvf commons-pool2-2.5.0-bin.tar.gz ; cd commons-pool2-2.5.0/```
+  * ```cp commons-pool2-2.5.0.jar /opt/shibboleth-idp/edit-webapp/WEBINF/lib/```
 
 5. Rebuild the **idp.war** of Shibboleth with the new libraries:
   * ```cd /opt/shibboleth-idp/ ; ./bin/build.sh```
